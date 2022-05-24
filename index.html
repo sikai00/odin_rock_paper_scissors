@@ -2,10 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <script src="main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="index.js" defer></script>
+  <link rel="stylesheet" href="style.css">
   <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-  
+  <div class="score-container">
+    <div class="player-score">Player: 0</div>
+    <div class="computer-score">Computer: 0</div>
+  </div>
+  <div class="choice-container">
+    <button data-choice="Rock">Rock</button>
+    <button data-choice="Paper">Paper</button>
+    <button data-choice="Scissors">Scissors</button>
+  </div>
+  <div class="message"></div>
+  <button class="reset-btn">Reset Game</button>
 </body>
 </html>
