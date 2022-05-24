@@ -16,13 +16,18 @@ body {
   padding: 16px 8px;
   width: 10vw;
   min-width: 100px;
+  transition: 0.15s ease-out;
 }
 
 .message {
   height: 3%;
 }
 
-.reset-btn {
+.reset-btn {  
   padding: 8px 4px;
   visibility: hidden;
+}
+
+.clicked {
+  transform: scale(1.03);
 }

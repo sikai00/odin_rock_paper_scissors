@@ -17,9 +17,21 @@ const computer = {
 document.querySelectorAll('.choice-container button').forEach(btn => {
   btn.addEventListener(
     'click', 
-    () => main(btn.dataset.choice)
+    () => {
+      main(btn.dataset.choice);
+      btn.classList.add('clicked');
+    }
+  );
+  btn.addEventListener(
+    'transitionend',
+    removeTransition
   );
 })
+
+function removeTransition(e) {
+  if (e.propertyName !== 'transform') return;
+  e.target.classList.remove('clicked');
+}
 
 document.querySelector('.reset-btn').addEventListener('click', () => resetGame());
 
